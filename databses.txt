@@ -1,0 +1,82 @@
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| evm                |
+| evm2               |
+| hello              |
+| mysql              |
+| mysqljdbc          |
+| performance_schema |
+| ravi               |
+| sys                |
++--------------------+
+9 rows in set (0.39 sec)
+
+mysql> use hello
+Database changed
+mysql> show tables;
++-----------------+
+| Tables_in_hello |
++-----------------+
+| emp             |
+| history         |
+| user            |
++-----------------+
+3 rows in set (0.05 sec)
+
+mysql> select * from history
+    -> ;
++---------+-----------------------+-------+-----------+---------------------+
+| user    | file                  | files | nfile     | date                |
++---------+-----------------------+-------+-----------+---------------------+
+| alok    | hello.txt             | 23    | nigga.txt | 2017/10/02 23:26:40 |
+| alok    | hello.txt             | 24    | nigga.txt | 2017/10/02 23:27:04 |
+| puneet  | hello.txt             | 23    | pun.txt   | 2017/10/02 23:32:21 |
+| puneet  | pun.txt               | 24    | pune.txt  | 2017/10/02 23:32:37 |
+| puneet  | images.jpg            | 39901 | pin.jpg   | 2017/10/03 16:56:29 |
+| puneet  | pin.jpg               | 39902 | zin.jpg   | 2017/10/03 16:56:49 |
+| navneet | hello.txt             | 6     | asd.txt   | 2017/10/23 09:41:54 |
+| pra     | as.txt                | 4     | aw.txt    | 2017/10/25 13:34:12 |
+| pra     | aw.txt                | 4     | jk.txt    | 2017/10/25 13:34:33 |
+| munish  | asd.txt               | 6     | asw.txt   | 2017/10/25 15:01:25 |
+| munish  | asw.txt               | 6     | qwe.txt   | 2017/10/25 15:02:16 |
+| munish  | asw.txt               | 6     | asd1.txt  | 2017/10/25 15:02:54 |
+| munish  | qwe.txt               | 6     | qwe1.txt  | 2017/10/25 15:03:21 |
+| munish  | qwe1.txt              | 6     | qwe2.txt  | 2017/10/25 15:03:45 |
+| puneet  | yo.txt                | 32    | no.txt    | 2017/10/29 11:08:06 |
+| ravi    | 1.txt                 | 480   | 2.txt     | 2017/12/10 12:19:23 |
+| ravi    | 2.txt                 | 480   | 3.txt     | 2017/12/10 12:20:14 |
+| ravi    | New Text Document.txt | 32    | qwe.txt   | 2017/12/31 19:20:58 |
++---------+-----------------------+-------+-----------+---------------------+
+18 rows in set (0.16 sec)
+
+mysql> select * from emp;
++---------+------+
+| name    | id   |
++---------+------+
+| puneet  |    7 |
+| deepraj |    9 |
++---------+------+
+2 rows in set (0.06 sec)
+
+mysql> select * form user;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'form user' at line 1
+mysql> select * from user;
++---------+--------+
+| name    | pass   |
++---------+--------+
+| puneet  | 12345  |
+| alok    | 321    |
+| ravi    | notmad |
+| navneet | hello  |
+| sana    | max    |
+| ravi1   | ravi1  |
+| naman   | 12345  |
+| pra     | 123    |
+| munish  | munish |
++---------+--------+
+9 rows in set (0.05 sec)
